@@ -4,19 +4,53 @@
     "color": {
       "palette": [
         {
-          "name": "Primary",
-          "slug": "primary",
-          "color": "#0056b3"
+          "name": "Black",
+          "slug": "black",
+          "color": "#000000"
         },
         {
-          "name": "Secondary",
-          "slug": "secondary",
-          "color": "#ffc107"
+          "name": "White",
+          "slug": "white",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "Pink",
+          "slug": "brand-pink",
+          "color": "#EA337F"
+        },
+        {
+          "name": "Orange",
+          "slug": "brand-orange",
+          "color": "#EC632B"
+        },
+        {
+          "name": "Yellow",
+          "slug": "brand-yellow",
+          "color": "#FCED4F"
+        },
+        {
+          "name": "Green",
+          "slug": "brand-green",
+          "color": "#6CAA31"
+        },
+        {
+          "name": "Blue",
+          "slug": "brand-blue",
+          "color": "#479ED6"
         }
       ],
-      "custom": false
+      "custom": true,
+      "defaultPalette": false,
+      "defaultGradients": false
     },
     "typography": {
+      "fontFamilies": [
+        {
+          "name": "System Font",
+          "slug": "system-font",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        }
+      ],
       "fontSizes": [
         {
           "name": "Small",
@@ -32,12 +66,27 @@
           "name": "Large",
           "slug": "large",
           "size": "1.25rem"
+        },
+        {
+          "name": "Huge",
+          "slug": "huge",
+          "size": "2.25rem"
         }
       ],
       "customFontSize": false
     },
     "spacing": {
-      "units": ["px", "%", "em", "rem", "vw", "vh"]
+      "units": ["px", "%", "em", "rem", "vw", "vh"],
+      "blockGap": "1.5rem"
+    },
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1200px"
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--system-font)"
     }
   }
 }
