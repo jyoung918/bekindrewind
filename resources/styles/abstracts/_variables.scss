@@ -1,0 +1,109 @@
+/* ==================================================== */
+/* == COLORS: Neutrals ================================ */
+/* ==================================================== */
+
+$color-black:        #000000;
+$color-white:        #ffffff;
+
+$black-5:  rgba(0, 0, 0, 0.05);
+$black-10: rgba(0, 0, 0, 0.10);
+$black-15: rgba(0, 0, 0, 0.15);
+$black-20: rgba(0, 0, 0, 0.20);
+$black-25: rgba(0, 0, 0, 0.25);
+$black-30: rgba(0, 0, 0, 0.30);
+$black-35: rgba(0, 0, 0, 0.35);
+$black-40: rgba(0, 0, 0, 0.40);
+$black-45: rgba(0, 0, 0, 0.45);
+$black-50: rgba(0, 0, 0, 0.50);
+$black-55: rgba(0, 0, 0, 0.55);
+$black-60: rgba(0, 0, 0, 0.60);
+$black-65: rgba(0, 0, 0, 0.65);
+$black-70: rgba(0, 0, 0, 0.70);
+$black-75: rgba(0, 0, 0, 0.75);
+$black-80: rgba(0, 0, 0, 0.80);
+$black-85: rgba(0, 0, 0, 0.85);
+$black-90: rgba(0, 0, 0, 0.90);
+$black-95: rgba(0, 0, 0, 0.95);
+
+$white-5:  rgba(255, 255, 255, 0.05);
+$white-10: rgba(255, 255, 255, 0.10);
+$white-15: rgba(255, 255, 255, 0.15);
+$white-20: rgba(255, 255, 255, 0.20);
+$white-25: rgba(255, 255, 255, 0.25);
+$white-30: rgba(255, 255, 255, 0.30);
+$white-35: rgba(255, 255, 255, 0.35);
+$white-40: rgba(255, 255, 255, 0.40);
+$white-45: rgba(255, 255, 255, 0.45);
+$white-50: rgba(255, 255, 255, 0.50);
+$white-55: rgba(255, 255, 255, 0.55);
+$white-60: rgba(255, 255, 255, 0.60);
+$white-65: rgba(255, 255, 255, 0.65);
+$white-70: rgba(255, 255, 255, 0.70);
+$white-75: rgba(255, 255, 255, 0.75);
+$white-80: rgba(255, 255, 255, 0.80);
+$white-85: rgba(255, 255, 255, 0.85);
+$white-90: rgba(255, 255, 255, 0.90);
+$white-95: rgba(255, 255, 255, 0.95);
+
+/* ==================================================== */
+/* == COLORS: Brand =================================== */
+/* ==================================================== */
+
+$color-brand-pink:   #EA337F;
+$color-brand-orange: #EC632B;
+$color-brand-yellow: #FCED4F;
+$color-brand-green:  #6CAA31;
+$color-brand-blue:   #479ED6;
+
+/* ==================================================== */
+/* == TYPOGRAPHY: Family ============================== */
+/* ==================================================== */
+
+@import url("https://use.typekit.net/tgd4bsc.css");
+
+$font-family-articulate: articulat-cf, sans-serif;
+
+$font-family-sans:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif:  "Georgia", serif;
+
+$font-family-display: $font-family-articulate;
+
+/* ==================================================== */
+/* == TYPOGRAPHY: Size ================================ */
+/* ==================================================== */
+
+$font-size-base:  1rem;
+$font-size-sm:    0.875rem;
+$font-size-lg:    1.25rem;
+$font-size-xl:    2.25rem;
+$font-size-2xl:   1.75rem;
+$font-size-3xl:   1.5rem;
+$font-size-4xl:   1.25rem;
+$font-size-5xl:   1rem;
+$font-size-6xl:   0.875rem;
+
+/* ==================================================== */
+/* == TYPOGRAPHY: Responsive Sizes ==================== */
+/* ==================================================== */
+
+/* Responsive font sizes using clamp() */
+
+$font-size-body: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+$font-size-h1: clamp(2rem, 4vw + 1rem, 3rem);
+$font-size-h2: clamp(1.75rem, 3.5vw + 1rem, 2.5rem);
+$font-size-h3: clamp(1.5rem, 3vw + 1rem, 2rem);
+$font-size-h4: clamp(1.25rem, 2vw + 1rem, 1.5rem);
+$font-size-h5: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+$font-size-h6: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+
+/* ==================================================== */
+/* == BORDERS: Radius ================================= */
+/* ==================================================== */
+
+$border-radius-xs:   0.5rem;
+$border-radius-sm:   0.75rem;
+$border-radius-md:   1rem;
+$border-radius-lg:   1.25rem;
+$border-radius-xl:   2rem;
+
+$border-radius: $border-radius-md;

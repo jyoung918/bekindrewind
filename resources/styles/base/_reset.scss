@@ -1,0 +1,100 @@
+/* RESET BASELINE */
+/* -------------------------------------- */
+
+/* 1. Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin, padding, border */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 3. Set base HTML5 elements to block */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/* 4. Body defaults */
+body {
+  line-height: 1.5;
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5. Remove list styles */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* 6. Remove quotes from blockquotes and q */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: '';
+  content: none;
+}
+
+/* 7. Remove default table border collapse */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 8. Images are responsive by default */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 9. Forms inherit font */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 10. Buttons and links reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 11. Accessibility improvements */
+[hidden] {
+  display: none !important;
+}
