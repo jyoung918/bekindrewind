@@ -1,0 +1,8 @@
+/node_modules
+/vendor
+/public
+.env
+.budfiles
+.yarn/install-state.gz
+npm-debug.log
+yarn-error.log

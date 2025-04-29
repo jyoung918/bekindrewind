@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#0056b3"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "#ffc107"
+        }
+      ],
+      "custom": false
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "name": "Normal",
+          "slug": "normal",
+          "size": "1rem"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "1.25rem"
+        }
+      ],
+      "customFontSize": false
+    },
+    "spacing": {
+      "units": ["px", "%", "em", "rem", "vw", "vh"]
+    }
+  }
+}
