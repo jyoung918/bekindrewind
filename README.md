@@ -41,7 +41,9 @@ Sage is a WordPress starter theme with block editor support.
 - Modern frontend development workflow powered by [Bud](https://bud.js.org/)
 - Out of the box support for [Tailwind CSS](https://tailwindcss.com/)
 
-## Original code is a fork of the Sage theme to be used as a starter theme for CodeZone.
+### Original code is a fork of the Sage theme.
+#### Updated by CodeZone.
+##### Customized be Be Kind Rewind
 
 To update fork:
 
