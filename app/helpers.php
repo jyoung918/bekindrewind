@@ -43,4 +43,11 @@ function cz_acf_is_on(){
     return false;
 }
 
-
+if (!function_exists('get_youtube_id')) {
+  function get_youtube_id($url) {
+    if (preg_match('/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))([a-zA-Z0-9_-]{11})/', $url, $matches)) {
+      return $matches[1];
+    }
+    return null;
+  }
+}

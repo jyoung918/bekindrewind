@@ -1,17 +1,13 @@
-.category-tag {
-  display: inline-block;
-  padding: 0.25rem 0.625rem;
-  font-size: $font-size-sm;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  background-color: $black-5;
-  color: $color-black;
-  border-radius: $border-radius-xs;
-  margin-right: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
+@use "../abstracts/variables" as *;
 
-  &:hover {
-    background-color: $black-10;
-  }
+.category-tag {
+  padding: .5rem 1rem;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $white-100;
+  border: 2px solid $white-100;
+  border-radius: $border-radius-xl;
+  text-decoration: none;
 }

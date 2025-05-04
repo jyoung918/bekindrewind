@@ -1,8 +1,14 @@
 @props(['post'])
 
 <article class="post post--pinned">
-  {{-- Featured Image --}}
-  @if (has_post_thumbnail($post->ID))
+  {{-- Featured Media: Video or Image --}}
+  @php
+    $video_url = get_field('featured_video', $post->ID);
+  @endphp
+
+  @if ($video_url)
+    @include('components.featured-video', ['url' => $video_url])
+  @elseif (has_post_thumbnail($post->ID))
     <a href="{{ get_permalink($post->ID) }}" class="post--pinned__image-link">
       {!! get_the_post_thumbnail($post->ID, 'full', ['class' => 'post--pinned__image']) !!}
     </a>
@@ -12,26 +18,28 @@
     {{-- Categories --}}
     @php $categories = get_the_category($post->ID); @endphp
     @if ($categories)
-      <div class="post--pinned__meta">
-        <div class="post--pinned__categories">
-          @foreach ($categories as $category)
-            <a href="{{ get_category_link($category) }}">{{ $category->name }}</a>
-          @endforeach
-        </div>
+      <div class="post--pinned__categories">
+        @foreach ($categories as $category)
+          @include('components.category')
+        @endforeach
       </div>
     @endif
 
-    {{-- Title --}}
-    <h2 class="post--pinned__title">
-      <a href="{{ get_permalink($post->ID) }}">
-        {{ get_the_title($post->ID) }}
-      </a>
-    </h2>
+    <div class="post--pinned__title-excerpt">
 
-    {{-- Excerpt --}}
-    <p class="post--pinned__excerpt">
-      {{ get_the_excerpt($post->ID) }}
-    </p>
+      {{-- Title --}}
+      <h2 class="post--pinned__title">
+        <a href="{{ get_permalink($post->ID) }}">
+          {{ get_the_title($post->ID) }}
+        </a>
+      </h2>
+
+      {{-- Excerpt --}}
+      <p class="post--pinned__excerpt">
+        {{ get_the_excerpt($post->ID) }}
+      </p>
+
+    </div>
 
     {{-- Author --}}
     <span class="post--pinned__author">

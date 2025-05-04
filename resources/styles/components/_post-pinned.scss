@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as *;
+
+.post--pinned{
+  &__image{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid $white-10;
+    border-radius: 1rem;
+    overflow: auto;
+    filter: drop-shadow(0 0 200px $color-brand-blue);
+    z-index: -1;
+  }
+
+  &__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  &__title-excerpt{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+
+  &__title{
+    text-align: center;
+  }
+
+  &__excerpt{
+    text-align: center;
+    text-wrap: pretty;
+    margin: 0;
+  }
+
+  &__author{
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+  }
+}
