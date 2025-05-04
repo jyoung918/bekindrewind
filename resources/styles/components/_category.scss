@@ -1,0 +1,17 @@
+.category-tag {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: $black-5;
+  color: $color-black;
+  border-radius: $border-radius-xs;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $black-10;
+  }
+}

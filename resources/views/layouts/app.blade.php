@@ -17,15 +17,9 @@
 
       @include('sections.header')
 
-      <main id="main" class="main container mx-auto">
+      <main id="main" class="main">
         @yield('content')
       </main>
-
-      @hasSection('sidebar')
-        <aside class="sidebar">
-          
-        </aside>
-      @endif
 
       @include('sections.footer')
     </div>
