@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.home-feed{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+
+  padding: 1rem;
+  background-image: linear-gradient(120deg, $white-10, $white-5);
+  border: 1px solid $white-10;
+  border-radius: 2rem;
+
+  &__pinned, &__trending, &__latest{
+    align-items: center;
+    grid-column: 1 / -1;
+  }
+
+  &__trending{
+
+    .trending-posts{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

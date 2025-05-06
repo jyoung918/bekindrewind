@@ -21,13 +21,13 @@
     @endphp
 
     @if ($pinned->have_posts())
-      <div class="pinned-post">
+    <section class="home-feed__pinned">
         @while ($pinned->have_posts())
           @php $pinned->the_post(); @endphp
           @include('components.post-pinned', ['post' => get_post()])
         @endwhile
         @php wp_reset_postdata(); @endphp
-      </div>
+    </section>
     @endif
   @endif
 
