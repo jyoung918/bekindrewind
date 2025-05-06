@@ -4,11 +4,9 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 1px solid $white-10;
+  background: $black-100;
   border-radius: 1rem;
-  overflow: auto;
-  filter: drop-shadow(0 0 200px $color-brand-blue);
-  z-index: -1;
+  overflow: hidden;
 
   iframe{
     width: 100%;

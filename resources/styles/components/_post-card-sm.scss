@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as *;
+
+.post-card-sm {
+  position: relative;
+  background: radial-gradient(circle at top left, $white-20, transparent 80%);
+  border: 1px solid $white-10;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px; // Gradient border thickness
+    background:
+      radial-gradient(circle at bottom right, $color-brand-blue, transparent 15%),
+      linear-gradient(rgba(255, 255, 255, 0.05) 0 0);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  &__image-link {
+  }
+
+  &__image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  a{
+    display: block;
+    //grid-column: 1 / -1;
+    //grid-row: 2 / 4;
+
+    h2 {
+      font-size: $font-size-base;
+    }
+  }
+
+
+}

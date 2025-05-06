@@ -1,37 +1,35 @@
+@use 'sass:map';
+
 /* ==================================================== */
 /* == DEFINE BREAKPOINTS IN MAP ======================= */
 /* ==================================================== */
 $breakpoints: (
-  'mobile-sm': 320px,     // Small Mobile Devices
-  'mobile-md': 375px,     // Medium Mobile Devices
-  'mobile-lg': 425px,     // Large Mobile Devices
-  'tablet': 768px,        // Standard Tablets
-  'laptop': 1024px,       // Standard Laptops
-  'laptop-lg': 1440px,    // Large Laptops
-  'desktop-hd': 1920px,   // Desktop HD
-  'desktop-4k': 2560px    // Desktop 4K
+  mobile-sm: 320px,     // Small Mobile Devices
+  mobile-md: 375px,     // Medium Mobile Devices
+  mobile-lg: 425px,     // Large Mobile Devices
+  tablet: 768px,        // Standard Tablets
+  laptop: 1024px,       // Standard Laptops
+  laptop-lg: 1440px,    // Large Laptops
+  desktop-hd: 1920px,   // Desktop HD
+  desktop-4k: 2560px    // Desktop 4K
 );
 
 /* ==================================================== */
 /* == MIXIN FOR MEDIA QUERIES ========================= */
 /* ==================================================== */
-// This mixin generates media queries based on a given breakpoint from the $breakpoints map.
-// It checks if the specified breakpoint exists and creates a media query using the min-width rule.
-
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) { 
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
-  }
-  
-  @else {
+  } @else {
     @warn "Unknown breakpoint: #{$breakpoint}.";
   }
 }
 
 // == USAGE EXAMPLES ============================== //
-// @include respond-to('INSERT VARIABLE HERE') {}
+// @include respond-to(tablet) { ... }
+// @include respond-to(desktop-hd) { ... }
 
 
 /* ==================================================== */

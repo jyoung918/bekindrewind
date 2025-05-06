@@ -1,6 +1,8 @@
 @use "../abstracts/variables" as *;
 
 .post--pinned{
+  filter: drop-shadow(0 0 200px $color-brand-blue);
+
   &__image{
     position: relative;
     width: 100%;
@@ -8,8 +10,6 @@
     border: 1px solid $white-10;
     border-radius: 1rem;
     overflow: auto;
-    filter: drop-shadow(0 0 200px $color-brand-blue);
-    z-index: -1;
   }
 
   &__content{

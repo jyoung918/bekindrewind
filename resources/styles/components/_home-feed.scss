@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  max-width: 1440px;
 
   padding: 1rem;
   background-image: linear-gradient(120deg, $white-10, $white-5);
@@ -45,6 +44,22 @@
   }
 
   &__latest{
+
+    .latest-posts{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto 1fr;
+      gap: 1rem;
+
+      @include respond-to('tablet') {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include respond-to('laptop') {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @include respond-to('laptop') {
       grid-column: 5 / -1;
       grid-row: 1 / 3;
