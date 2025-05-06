@@ -12,11 +12,10 @@
       <h2>{!! get_the_title($post->ID) !!}</h2>
     </a>
 
-    <span class="post-card-md__meta__footer">
-      By {{ get_the_author_meta('display_name', $post->post_author) }}
-    </span>
-
-    <time datetime="">8 Hours</time>
+    <div class="post-card-md__meta__footer">
+      <span>By {{ get_the_author_meta('display_name', $post->post_author) }}</span>
+      <time datetime="">8 Hours</time>
+    </div>
   </div>
 
 </article>
