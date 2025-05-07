@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+
+.section-header{
+  padding: .5rem 1rem;
+  border-left: 4px solid $color-brand-pink;
+  
+  &.orange{
+    border-left: 4px solid $color-brand-orange;
+  }
+
+  &.yellow{
+    border-left: 4px solid $color-brand-yellow;
+  }
+  
+  &.green{
+    border-left: 4px solid $color-brand-green;
+  }
+
+  &.blue{
+    border-left: 4px solid $color-brand-blue;
+  }
+
+  h2{
+    font-size: $font-size-lg;
+    text-transform: uppercase;
+  }
+}

@@ -2,6 +2,18 @@
 
 @section('content')
 
+<!-- <p class="font-xs">Hello World</p>
+<p class="font-sm">Hello World</p>
+<p class="font-base">Hello World</p>
+<p class="font-md">Hello World</p>
+<p class="font-lg">Hello World</p>
+<p class="font-xl">Hello World</p>
+<p class="font-2xl">Hello World</p>
+<p class="font-3xl">Hello World</p>
+<p class="font-4xl">Hello World</p>
+<p class="font-5xl">Hello World</p>
+<p class="font-6xl">Hello World</p> -->
+
 <section class="container">
 
   <section class="home-feed">
@@ -51,7 +63,7 @@
     @endphp
 
     <section class="home-feed__trending">
-      <h2 class="section-title">Top Trending Posts</h2>
+      @include('components.section-header', ['heading' => 'Trending', 'class' => 'pink'])
       @if ($trending_query->have_posts())
         <div class="trending-posts">
           @while ($trending_query->have_posts()) @php $trending_query->the_post(); @endphp
@@ -78,7 +90,7 @@
     @endphp
 
     <section class="home-feed__latest">
-      <h2 class="section-title">Latest Posts</h2>
+      @include('components.section-header', ['heading' => 'Latest', 'class' => 'pink'])
       @if ($latest_query->have_posts())
         <div class="latest-posts">
           @while ($latest_query->have_posts()) @php $latest_query->the_post(); @endphp

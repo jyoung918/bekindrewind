@@ -110,13 +110,59 @@ $font-family-display: $font-family-articulate;
 $font-size-xs:   clamp(0.75rem, 0.72rem + 0.1vw, 0.75rem);
 $font-size-sm:   clamp(0.875rem, 0.85rem + 0.2vw, 0.95rem);
 $font-size-base: clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
-$font-size-lg:   clamp(1.25rem, 1.15rem + 0.6vw, 1.75rem);
+$font-size-md:   clamp(1.125rem, 1.05rem + 0.45vw, 1.25rem); // NEW: between base and lg
+$font-size-lg:   clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
 $font-size-xl:   clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
 $font-size-2xl:  clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
 $font-size-3xl:  clamp(2rem, 1.7rem + 1.2vw, 2.75rem);
 $font-size-4xl:  clamp(2.5rem, 2rem + 1.5vw, 3.25rem);
 $font-size-5xl:  clamp(3rem, 2.4rem + 1.6vw, 3.75rem);
 $font-size-6xl:  clamp(3.5rem, 2.8rem + 1.8vw, 4.25rem);
+
+
+.font-xs{
+  font-size: $font-size-xs;
+}
+
+.font-sm{
+  font-size: $font-size-sm;
+}
+
+.font-base{
+  font-size: $font-size-base;
+}
+
+.font-md{
+  font-size: $font-size-md;
+}
+
+.font-lg{
+  font-size: $font-size-lg;
+}
+
+.font-xl{
+  font-size: $font-size-xl;
+}
+
+.font-2xl{
+  font-size: $font-size-2xl;
+}
+
+.font-3xl{
+  font-size: $font-size-3xl;
+}
+
+.font-4xl{
+  font-size: $font-size-4xl;
+}
+
+.font-5xl{
+  font-size: $font-size-5xl;
+}
+
+.font-6xl{
+  font-size: $font-size-6xl;
+}
 
 /* ==================================================== */
 /* == TYPOGRAPHY: Responsive Sizes ==================== */

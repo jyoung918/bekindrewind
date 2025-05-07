@@ -26,6 +26,9 @@
   }
 
   &__trending{
+    display: grid;
+    gap: 1rem;
+
     @include respond-to('laptop') {
       grid-column: 1 / 5;
     }
@@ -44,6 +47,11 @@
   }
 
   &__latest{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 1rem;
 
     .latest-posts{
       display: grid;
