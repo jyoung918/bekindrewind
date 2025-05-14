@@ -67,7 +67,7 @@
       @if ($trending_query->have_posts())
         <div class="trending-posts">
           @while ($trending_query->have_posts()) @php $trending_query->the_post(); @endphp
-            @include('components.post-card-md', ['post' => get_post()])
+            @include('components.post-card', ['post' => $post, 'size' => 'md'])
           @endwhile
         </div>
         @php wp_reset_postdata(); @endphp
@@ -94,7 +94,7 @@
       @if ($latest_query->have_posts())
         <div class="latest-posts">
           @while ($latest_query->have_posts()) @php $latest_query->the_post(); @endphp
-            @include('components.post-card-sm', ['post' => get_post()])
+            @include('components.post-card', ['post' => $post, 'size' => 'sm'])
           @endwhile
         </div>
         @php wp_reset_postdata(); @endphp

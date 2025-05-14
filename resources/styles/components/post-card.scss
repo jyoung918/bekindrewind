@@ -1,0 +1,117 @@
+@use "../abstracts/variables" as *;
+
+.post-card {
+  position: relative;
+  background: radial-gradient(circle at top left, $white-20, transparent 80%);
+  background-color: $white-0;
+  //border: 1px solid $white-10;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  cursor: pointer;
+  transition: background-color ease-out .2s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background:
+      radial-gradient(circle at bottom right, $color-brand-blue, transparent 15%),
+      linear-gradient(rgba(255, 255, 255, 0.05) 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  &__sm, &__md{
+    &__image-link {
+      overflow: hidden;
+    }
+  
+    &__image {
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform ease-out .2s;
+    }
+  
+    &__meta {
+      display: grid;
+      align-content: space-between;
+  
+      a h2 {
+        text-wrap: pretty;
+        letter-spacing: -1px;
+      }
+  
+      &__footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-size-xs;
+        color: $white-80;
+        letter-spacing: -0.8px;
+      }
+    }
+
+    &:hover {
+      background-color: $white-5;
+  
+      .post-card__sm, .post-card__md{      
+        &__image {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  // === Size Modifiers ===
+
+  &__sm {
+    grid-template-columns: 100px 1fr;
+
+    &__image {
+      aspect-ratio: 1 / 1;
+    }
+
+    &__meta {
+      padding: 0.8rem;
+
+      a h2 {
+        font-size: $font-size-sm;
+        line-height: 1rem;
+      }
+    }
+  }
+
+  &__md {
+    grid-column: span 2;
+    grid-row: span 2;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+
+    &__image-link {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+      grid-column: span 2;
+    }
+
+    &__meta {
+      grid-column: 1 / -1;
+      grid-row: 2 / 2;
+      padding: 0 1rem 1rem;
+      gap: 3rem;
+
+      a h2 {
+        font-size: $font-size-lg;
+      }
+    }
+  }
+}
