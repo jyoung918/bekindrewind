@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-.featured-video{
+.video-container {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -8,8 +8,26 @@
   border-radius: 1rem;
   overflow: hidden;
 
-  iframe{
+  iframe {
     width: 100%;
     height: 100%;
+    display: block;
+    border: none;
+    transition: opacity 0.5s ease-in-out; // Optional for fade between loops
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+
+    // This ensures the overlay fades out when class is toggled on the container
+    &.overlay-hidden {
+      opacity: 0;
+    }
   }
 }

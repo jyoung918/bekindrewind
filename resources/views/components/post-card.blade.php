@@ -22,7 +22,7 @@
           By {{ get_the_author_meta('display_name', $post->post_author) }}
         </a>
       </span>
-      @include('components.post-date', ['date' => $post->post_date])
+      @include('components.post-date', ['date' => get_post_datetime($post->ID)])
     </div>
   </div>
 </article>
