@@ -22,5 +22,5 @@ export default async (app) => {
     app
         .setUrl('http://localhost:3000')
         .setProxyUrl('https://bekindrewind.local')
-        .watch(['resources/views', 'app', 'blocks']);
+        .watch(['resources/views/**/*', 'app/**/*', 'resources/styles/**/*']);
 };
